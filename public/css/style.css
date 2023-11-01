@@ -6,6 +6,41 @@
     box-sizing: border-box;
 }
 
+.barra-superior{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.barra-busqueda{
+    display: flex;
+    width: 45%;
+    justify-content: center;
+}
+
+.logo{
+    width: 45%;
+    margin: 10px;
+}
+
+.busqueda{
+    margin: 0px;
+    border: hidden;
+    height: 30px;
+    padding: 5px;
+    width: 90%;
+}
+
+.fa-search {
+    background-color: white;
+    margin: 0px;
+    padding: 5px;
+    height: 30px;
+    text-align: center;
+}
+
 body {
     background-color: #ebebeb;
     font-family: 'Roboto', sans-serif;
@@ -35,14 +70,11 @@ body {
     font-size: 16px;
 }
 
-#busqueda {
-    background-color: white;
-    border: 1px solid grey;
-    padding: 2px;
-}
+
 
 #cuotas {
     text-align: center;
+    margin: 20px;
 }
 
 ul {
@@ -92,8 +124,14 @@ main{
 }
 
 .producto{
-    margin: 0px;
+    margin: 10px;
     margin-bottom: 10px;
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .detalles{
@@ -150,13 +188,62 @@ footer {
 }
 
 @media (min-width: 361px) {
+    .barra-superior{
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+    .logo{
+        width: 30%;
+    }
+
+    .barra-busqueda{
+        width: 30%;
+    }
+
+    #cuotas{
+        width: 30%;
+    }
+
     .descripciones, .site, .login-navbar{
         display: block;        
     }
-    .producto{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    .site, .login-navbar {
+        width: 40%;
     }
+
+
+
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .site .cuerpos{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .login-navbar .cuerpos{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .producto{
+        box-shadow: 0px 0px 10px rgb(100, 100, 1100);
+        width: 40%;
+    }
+
     .burger-menu{
         display: none;
+    }
+
+}
+
+@media(min-width: 769px){
+    .producto{
+        width: 22%;
     }
 }
