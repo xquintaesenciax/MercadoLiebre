@@ -187,6 +187,24 @@ footer {
     width: 70%;
 }
 
+
+.registro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px; /* Puedes ajustar el valor según tus preferencias */
+    margin: 0 auto;  /* Esto centrará el contenedor horizontalmente */
+}
+
+form{
+    display: flex;
+    align-items: center;
+}
+
+form li{
+    margin: 10px;
+}
+
 @media (min-width: 361px) {
     .barra-superior{
         justify-content: space-evenly;
